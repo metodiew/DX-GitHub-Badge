@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name: DX GitHub Badge
+ * Plugin URI: https://github.com/metodiew/DX-GitHub-Badge
  * Description: Display simple GitHub profile badge. Works with placing a shortcode.
  * Author: metodiew
  * Author URI: http://metodiew.com/
