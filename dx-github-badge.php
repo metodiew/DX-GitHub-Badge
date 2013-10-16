@@ -77,11 +77,7 @@ class DX_GitHub_Badge {
 	    	</iframe>
     	';
     	
-		ob_start();
-		
-		echo $dxBadgeContent;
-    	
-		return ob_get_clean();
+		return $dxBadgeContent;
     }
     
     /**
@@ -95,16 +91,16 @@ class DX_GitHub_Badge {
      * Register style
      */
 	public function dx_enqueue_style_css() {
-        wp_enqueue_style( 'style.css', plugins_url( '/style/style.css' , __FILE__ ) );
-        wp_enqueue_style( 'style.css' );
+        wp_enqueue_style( 'dxghb-style', plugins_url( '/style/style.css' , __FILE__ ) );
+        wp_enqueue_style( 'dxghb-style' );
     }
     
     /**
      * Register admin style
      */
     public function dx_enqueue_admin_style_css() {
-    	wp_enqueue_style( 'admin-style.css', plugins_url( '/style/admin-style.css', __FILE__ ) );
-    	wp_enqueue_style( 'admin-style.css' );
+    	wp_enqueue_style( 'dxghb-admin-style', plugins_url( '/style/admin-style.css', __FILE__ ) );
+    	wp_enqueue_style( 'dxghb-admin-style' );
     }
 
 }
