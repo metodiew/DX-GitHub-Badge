@@ -1,6 +1,6 @@
 === DX GitHub Badge ===
 Contributors: metodiew
-Donate link: http://devrix.com/
+Donate link: http://metodiew.com/
 Tags: GitHub, badge
 Requires at least: 3.5.0
 Tested up to: 3.5.1
@@ -17,7 +17,7 @@ The plugin is based on Github Badge - http://githubbadge.appspot.com/
 == Installation ==
 1. Upload `DX-GitHub-Badge` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Use `[dx_display_gh_badge]` shortcode in your Post/Page or place `<?php echo do_shortcode( '[dx_display_gh_badge]' ) ?>` in your templates.
+3. Use `[dx_display_gh_badge user="GitHub-Username-here"]` shortcode in your Post/Page.
 
 == Frequently Asked Questions ==
 = How to use plugin? =
