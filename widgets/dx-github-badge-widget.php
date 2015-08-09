@@ -13,7 +13,7 @@ class DX_GitHub_Badge_Widget extends WP_Widget {
      * Register the widget
      */
     public function __construct() {
-        $this->WP_Widget(
+        parent::__construct(
             'dx_github_badge_widget',
             __( 'DX GitHub Badge Widget' , 'dxghb' ),
             array( 
