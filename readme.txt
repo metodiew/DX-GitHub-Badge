@@ -3,8 +3,8 @@ Contributors: metodiew
 Donate link: http://metodiew.com/
 Tags: GitHub, badge
 Requires at least: 3.5.0
-Tested up to: 3.5.1
-Stable tag: 0.1
+Tested up to: 4.3
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,7 +26,16 @@ Use DX GitHub Badge Widget or `[dx_display_gh_badge user="GitHub-Username-here"]
 
 == Screenshots ==
 
+1. Dashboard Widgets
+2. Front End Widget
+
 == Changelog ==
+
+= (09.08.2015) =
+* Version updated to 1.0
+* Fix "Deprecating PHP4 style constructors in WordPress 4.3".
+	- See: https://make.wordpress.org/core/2015/07/02/deprecating-php4-style-constructors-in-wordpress-4-3/
+* Screeshots added
 
 = 0.1 =
 * Initial release

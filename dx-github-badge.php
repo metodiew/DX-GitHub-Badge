@@ -3,14 +3,13 @@
  * Plugin Name: DX GitHub Badge
  * Plugin URI: https://github.com/metodiew/DX-GitHub-Badge
  * Description: Display simple GitHub profile badge. Works with placing a shortcode.
- * Author: metodiew
+ * Author: Stanko Metodiev
  * Author URI: http://metodiew.com/
- * Version: 0.1
+ * Version: 1.0
  * License: GPL2+
  * Text Domain: dxghb
  * 
  */
-
 
 /**
  * The main class for the DX GitHub Badge
