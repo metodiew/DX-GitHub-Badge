@@ -2,10 +2,10 @@
 /**
  * Plugin Name: DX GitHub Badge
  * Plugin URI: https://github.com/metodiew/DX-GitHub-Badge
- * Description: Display simple GitHub profile badge. Works with placing a shortcode.
+ * Description: Display simple GitHub profile badge. Works with placing a shortcode or using a Widget
  * Author: Stanko Metodiev
  * Author URI: http://metodiew.com/
- * Version: 1.0
+ * Version: 1.1
  * License: GPL2+
  * Text Domain: dxghb
  * 
@@ -28,7 +28,7 @@ class DX_GitHub_Badge {
 		add_action( 'widgets_init', array( $this, 'add_dx_gh_badge_widget' ) );
 		add_action( 'admin_menu', array( $this, 'add_dx_github_badge_help_page' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'dx_enqueue_style_css' ) );
-		add_action( 'admin_init', array( $this, 'dx_enqueue_admin_style_css' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'dx_enqueue_admin_style_css' ) );
 	}
 	
 	/**
@@ -63,21 +63,25 @@ class DX_GitHub_Badge {
     		'height'	=> '127',
     		'border'	=> '0'
 		), $atts ) );
-		
-    	$dxBadgeContent = '
-	    	<iframe 
-	    		src="http://githubbadge.appspot.com/' . $user . '?s=1&a=0" 
-	    		style="
-		    		width: ' . $width . 'px;
-	    			height: ' . $height . 'px;
-		    		border: ' . $border . ';
-		    		overflow: hidden;
-		    	" 
-	    		frameBorder="0">
-	    	</iframe>
-    	';
     	
-		return $dxBadgeContent;
+    	$output = '';
+    	
+    	if ( ! empty( $user ) ) {
+    		$output.= '
+		    	<iframe
+		    		src="http://githubbadge.appspot.com/' . $user . '?s=1&a=0"
+		    		style="
+			    		width: ' . $width . 'px;
+		    			height: ' . $height . 'px;
+			    		border: ' . $border . ';
+			    		overflow: hidden;
+			    	"
+		    		frameBorder="0">
+		    	</iframe>
+	    	';
+    	}
+    	
+		return $output;
     }
     
     /**

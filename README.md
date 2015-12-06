@@ -3,8 +3,8 @@ Contributors: metodiew
 Donate link: http://metodiew.com/
 Tags: GitHub, badge
 Requires at least: 3.5.0
-Tested up to: 4.3
-Stable tag: 1.0
+Tested up to: 4.4
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,11 @@ Use DX GitHub Badge Widget or `[dx_display_gh_badge user="GitHub-Username-here"]
 2. Front End Widget
 
 == Changelog ==
+
+= (06.12.2015) =
+* Version updated to 1.1
+* Minor updates to the codebase - add checks if GitHub username is not empty
+* a11y improvements - update Help Page Headings 
 
 = (09.08.2015) =
 * Version updated to 1.0

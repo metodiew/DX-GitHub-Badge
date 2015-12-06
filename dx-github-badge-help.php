@@ -1,6 +1,6 @@
 <div class="wrap">
 	<div id="icon-plugins" class="icon32"></div>
-	<h2><?php _e( 'DX GitHub Badge', 'dxghb' ); ?></h2>
+	<h1><?php _e( 'DX GitHub Badge Help Page', 'dxghb' ); ?></h1>
 </div>
 
 <div>

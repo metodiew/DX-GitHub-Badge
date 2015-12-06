@@ -20,7 +20,7 @@ class DX_GitHub_Badge_Widget extends WP_Widget {
             	'classname' => 'dx_github_badge', 
             	'description' => __( 'DX GitHub Badge Widget', 'dxghb' ) 
             ),
-            array( )
+            array()
         );
     }
 
@@ -36,33 +36,37 @@ class DX_GitHub_Badge_Widget extends WP_Widget {
         $widget_title = apply_filters( 'widget_title', $instance[ 'widget_title' ] );
 
         // Start widget body
+        $widget_output = '';
         
-        $dxBadgeContent = '
-	    	<iframe 
-	    		src="http://githubbadge.appspot.com/' . $instance['github_username'] . '?s=1&a=0" 
-	    		style="
-		    		width: ' . $instance["width"] .';
-	    			height: ' . $instance["height"] . ';
-		    		border: ' . $instance["border"] . ';
-		    		overflow: hidden;
-		    	" 
-	    		frameBorder="0">
-	    	</iframe>
-    	';
+        if ( ! empty( $instance['github_username'] ) ) {
+        	$widget_output .= '
+		    	<iframe
+		    		src="http://githubbadge.appspot.com/' . $instance['github_username'] . '?s=1&a=0"
+		    		style="
+			    		width: ' . $instance["width"] .';
+		    			height: ' . $instance["height"] . ';
+			    		border: ' . $instance["border"] . ';
+			    		overflow: hidden;
+			    	"
+		    		frameBorder="0">
+		    	</iframe>
+	    	';
+        }
         
         // End sample widget body creation
         
-        if ( !empty( $dxBadgeContent ) ) {
+        if ( ! empty( $widget_output ) ) {
         	echo $before_widget;
+        	
         	if ( $widget_title ) {
         		echo $before_title . $widget_title . $after_title;
         	}
         	?>
         	<div class="dx_github_badge_widget">
-        		<?php echo $dxBadgeContent; ?>
+        		<?php echo $widget_output; ?>
         	</div>
         	<?php
-        		echo $after_widget;
+			echo $after_widget;
         }
     }
 
